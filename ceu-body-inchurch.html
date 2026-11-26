@@ -1,0 +1,465 @@
+<!-- PÁGINA MULTIUSO: CÉU NA RUA — A Ponte BH. Colar no editor HTML da Página Multiuso do inChurch. -->
+<style>
+.cr, .cr * { box-sizing:border-box; }
+.cr { --forest:#10302c; --deep:#0a211e; --cream:#ece4d0; --lime:#a3c62f; --sky:#a8c3ee; --muted:rgba(236,228,208,.74); --serif:Georgia,'Times New Roman','Iowan Old Style',serif; --sans:'Segoe UI',system-ui,-apple-system,Roboto,'Helvetica Neue',Arial,sans-serif;
+  font-family:var(--sans); background:var(--forest); color:var(--cream); line-height:1.65; overflow:hidden; scroll-behavior:smooth; }
+.cr h1,.cr h2,.cr h3,.cr h4,.cr p,.cr dl,.cr dd,.cr ul { margin:0; padding:0; }
+.cr a { color:inherit; text-decoration:none; }
+.cr a:focus-visible, .cr button:focus-visible { outline:3px solid var(--sky); outline-offset:3px; border-radius:6px; }
+.cr .wrap { max-width:1180px; margin:0 auto; padding:0 28px; }
+.cr .serif { font-family:var(--serif); font-weight:700; letter-spacing:-.01em; }
+.cr .pill { display:inline-flex; align-items:center; gap:9px; padding:7px 16px; border:1px solid currentColor; border-radius:999px; font:600 .8rem var(--sans); letter-spacing:.14em; text-transform:uppercase; margin-bottom:22px; opacity:.85; }
+.cr .pill::before { content:''; width:7px; height:7px; border-radius:50%; background:currentColor; }
+.cr .hd { display:block; }
+.cr .serif { text-wrap:balance; }
+.cr .fig em.mais { display:block; font:600 .95rem var(--sans); letter-spacing:.02em; margin-bottom:6px; opacity:.8; }
+.cr .btn { display:inline-flex; align-items:center; justify-content:center; padding:15px 28px; border-radius:999px; font:700 .98rem var(--sans); border:2px solid transparent; cursor:pointer; transition:transform .2s, background .2s, color .2s, border-color .2s; }
+.cr .btn:hover { transform:translateY(-2px); }
+.cr .btn-lime { background:var(--lime); color:var(--forest); }
+.cr .btn-lime:hover { background:#b6d83d; }
+.cr .btn-cream { background:var(--cream); color:var(--forest); }
+.cr .btn-line { border-color:rgba(236,228,208,.45); color:var(--cream); }
+.cr .btn-line:hover { border-color:var(--cream); }
+.cr .btn-dark { background:var(--forest); color:var(--cream); }
+
+/* NAV */
+.cr .nav { background:rgba(10,33,30,.92); border-bottom:1px solid rgba(236,228,208,.12); position:relative; z-index:20; }
+.cr.cr-standalone .nav { position:sticky; top:0; backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
+.cr .nav-in { display:flex; align-items:center; justify-content:space-between; height:72px; gap:20px; }
+.cr .brand { display:flex; align-items:baseline; gap:8px; font-size:1.55rem; line-height:1; }
+.cr .brand small { font:600 .8rem var(--sans); color:var(--muted); letter-spacing:.02em; }
+.cr .menu { display:flex; align-items:center; gap:34px; font-weight:600; font-size:.96rem; }
+.cr .menu a:not(.btn) { opacity:.82; transition:opacity .2s, color .2s; }
+.cr .menu a:not(.btn):hover { opacity:1; color:var(--lime); }
+.cr .menu .btn { padding:11px 22px; font-size:.92rem; }
+.cr .burger { display:none; background:none; border:0; color:var(--cream); width:44px; height:44px; cursor:pointer; padding:0; }
+.cr .burger span { display:block; width:24px; height:2px; background:currentColor; margin:6px auto; transition:transform .25s, opacity .25s; }
+
+/* HERO */
+.cr .hero { position:relative; overflow:hidden; padding:76px 0 96px; min-height:min(88vh,820px); display:flex; align-items:center; isolation:isolate; }
+.cr .sun { position:absolute; z-index:-1; right:-140px; top:-120px; width:640px; height:640px; border-radius:50%; background:var(--lime); }
+.cr .sun::after { content:''; position:absolute; inset:70px; border-radius:50%; border:3px solid var(--forest); opacity:.18; }
+.cr .sun-sky { position:absolute; z-index:-1; right:300px; bottom:-230px; width:420px; height:420px; border-radius:50%; background:var(--sky); opacity:.95; }
+.cr .hero-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:48px; align-items:end; }
+.cr .wordmark { position:relative; line-height:0; margin:0; max-width:620px; }
+.cr .wordmark .logo { display:block; width:100%; height:auto; }
+.cr .wm-1 { display:block; font-size:clamp(6.2rem,17vw,14.5rem); }
+.cr .wm-2 { display:flex; align-items:flex-end; gap:.18em; margin-top:.02em; }
+.cr .wm-na { font-size:clamp(2.6rem,6.4vw,5.6rem); color:var(--lime); transform:translateY(.06em); }
+.cr .wm-rua { font-size:clamp(6.2rem,17vw,14.5rem); }
+.cr .cloud { position:absolute; width:30%; left:44%; top:34%; filter:drop-shadow(0 18px 26px rgba(0,0,0,.35)); animation:cr-float 9s ease-in-out infinite; pointer-events:none; }
+@keyframes cr-float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-14px); } }
+.cr .hero-copy { padding-bottom:12px; position:relative; z-index:2; }
+.cr .hero-copy h2 { font-size:clamp(1.6rem,2.7vw,2.15rem); line-height:1.15; color:var(--forest); margin-bottom:14px; }
+.cr .hero-copy p { color:var(--forest); font-size:1.08rem; font-weight:500; margin-bottom:26px; max-width:30ch; }
+.cr .hero-panel { background:var(--cream); border-radius:30px; padding:34px 32px 32px; box-shadow:0 30px 60px rgba(0,0,0,.28); }
+.cr .hero-actions { display:flex; flex-wrap:wrap; gap:10px; }
+.cr .hero-actions .btn-line { border-color:rgba(16,48,44,.45); color:var(--forest); }
+.cr .hero-actions .btn-line:hover { border-color:var(--forest); }
+
+/* MARQUEE */
+.cr .strip { background:var(--lime); color:var(--forest); overflow:hidden; border-block:1px solid rgba(16,48,44,.2); }
+.cr .strip-track { display:flex; width:max-content; animation:cr-slide 38s linear infinite; }
+.cr .strip-track span { display:flex; align-items:center; gap:34px; padding:18px 17px; font-size:clamp(1.3rem,2.4vw,1.9rem); white-space:nowrap; }
+.cr .strip-track svg { width:46px; height:auto; flex:none; }
+@keyframes cr-slide { to { transform:translateX(-50%); } }
+
+/* IMPACTO */
+.cr .impact { background:var(--cream); color:var(--forest); padding:92px 0; }
+.cr .impact-head { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:end; margin-bottom:56px; }
+.cr .impact-head h2 { font-size:clamp(2rem,3.7vw,2.95rem); line-height:1.12; }
+.cr .impact-head p { font-size:1.14rem; max-width:44ch; }
+.cr .figures { display:grid; grid-template-columns:repeat(3,1fr); border-top:2px solid var(--forest); }
+.cr .fig { padding:30px 28px 8px 0; }
+.cr .fig + .fig { padding-left:28px; border-left:1px solid rgba(16,48,44,.25); }
+.cr .fig b { display:block; font:800 clamp(3.6rem,8vw,6.4rem)/.95 var(--sans); letter-spacing:-.03em; letter-spacing:-.03em; }
+.cr .fig span { display:block; margin-top:12px; font-weight:600; font-size:1.04rem; max-width:20ch; }
+
+/* PORTAL */
+.cr .about { padding:112px 0; }
+.cr .about-grid { display:grid; grid-template-columns:1.1fr .9fr; gap:72px; align-items:start; }
+.cr .about h2 { font-size:clamp(2rem,3.7vw,2.95rem); line-height:1.12; }
+.cr .about .txt p { font-size:1.12rem; color:var(--muted); max-width:56ch; }
+.cr .about .txt p + p { margin-top:20px; }
+.cr .about .txt p:first-child { color:var(--cream); font-size:1.22rem; }
+.cr .mission { margin-top:72px; background:var(--sky); color:var(--forest); border-radius:34px; padding:44px 48px; display:grid; grid-template-columns:auto 1fr; gap:28px 48px; align-items:center; }
+.cr .mission h3 { font-size:clamp(1.8rem,3.2vw,2.5rem); line-height:1.12; }
+.cr .mission p { font-size:1.14rem; font-weight:500; max-width:60ch; }
+
+
+/* FOTO SOBRE */
+.cr .about-photo { border:1px solid rgba(236,228,208,.25); margin:72px 0 0; position:relative; border-radius:32px; overflow:hidden; background:var(--deep); }
+.cr .about-photo > img { display:block; width:100%; height:clamp(340px,46vw,560px); object-fit:cover; object-position:center 30%; }
+.cr .about-photo::after { content:''; position:absolute; inset:0; background:linear-gradient(to top, rgba(10,33,30,.78), rgba(10,33,30,0) 55%); pointer-events:none; }
+.cr .about-photo .mission { position:absolute; z-index:2; left:clamp(18px,3vw,40px); bottom:clamp(18px,3vw,40px); margin:0; max-width:520px; background:var(--sky); color:var(--forest); border-radius:24px; padding:28px 32px; display:block; }
+.cr .about-photo .mission h3 { font-size:1.7rem; line-height:1.12; margin-bottom:8px; }
+.cr .about-photo .mission p { font-size:1.04rem; font-weight:500; }
+@media (max-width:920px) { .cr .about-photo { margin-top:48px; } .cr .about-photo > img { height:300px; } .cr .about-photo .mission { position:static; max-width:none; border-radius:0; } .cr .about-photo::after { display:none; } }
+
+/* PROJETOS */
+.cr .projects { background:var(--deep); padding:110px 0 70px; }
+.cr .projects-head { max-width:720px; margin-bottom:72px; }
+.cr .projects-head h2 { font-size:clamp(2rem,3.7vw,2.95rem); line-height:1.12; margin-bottom:16px; }
+.cr .projects-head p { color:var(--muted); font-size:1.14rem; }
+.cr .proj { display:grid; grid-template-columns:7fr 5fr; gap:64px; align-items:center; padding-bottom:96px; }
+.cr .proj.flip { grid-template-columns:5fr 7fr; }
+.cr .proj.flip .mcol { order:2; }
+.cr .media { border:1px solid rgba(16,48,44,.2); position:relative; aspect-ratio:4/3; border-radius:30px; overflow:hidden; background:var(--lime); }
+.cr .thumbs { display:grid; grid-auto-flow:column; grid-auto-columns:1fr; gap:14px; margin-top:14px; }
+.cr .thumbs img { width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:20px; display:block; border:1px solid rgba(236,228,208,.2); }
+.cr .gallery { padding:20px 0 100px; background:var(--deep); }
+.cr .gallery h2 { font-size:clamp(2rem,3.7vw,2.95rem); line-height:1.12; }
+.cr .gallery .gal { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-top:0; }
+.cr .gallery .gal img { width:100%; aspect-ratio:4/5; object-fit:cover; border-radius:26px; display:block; border:1px solid rgba(236,228,208,.2); }
+.cr .gallery .gal img:nth-child(2) { margin-top:36px; }
+@media (max-width:920px) { .cr .gallery { padding-bottom:72px; } .cr .gallery .gal { grid-template-columns:1fr 1fr; } .cr .gallery .gal img:nth-child(2) { margin-top:0; } .cr .gallery .gal img:nth-child(3) { grid-column:1 / -1; aspect-ratio:16/10; } .cr .thumbs { gap:10px; } }
+.cr .band { margin:0 0 96px; }
+.cr .band-top { margin:0 0 80px; }
+.cr .band-end { margin:80px 0 0; }
+.cr .band-top img { border-color:rgba(16,48,44,.2); }
+.cr .band img { width:100%; aspect-ratio:21/9; object-fit:cover; border-radius:30px; display:block; border:1px solid rgba(236,228,208,.2); }
+@media (max-width:920px) { .cr .band-top { margin-bottom:56px; } .cr .band-end { margin-top:56px; } .cr .band { margin-bottom:64px; } .cr .band img { aspect-ratio:4/3; border-radius:22px; } }
+.cr .media svg.art { position:absolute; inset:0; width:100%; height:100%; }
+.cr .media img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.cr .proj-text .where { display:inline-block; background:var(--sky); color:var(--forest); font-weight:700; font-size:.88rem; padding:6px 15px; border-radius:999px; margin-bottom:20px; }
+.cr .proj-text h3 { font-size:clamp(2rem,3.6vw,2.9rem); line-height:1.12; margin-bottom:20px; }
+.cr .proj-text p { color:var(--muted); font-size:1.08rem; }
+.cr .proj-text p + p { margin-top:14px; }
+.cr .facts { margin-top:30px; border-top:1px solid rgba(236,228,208,.25); }
+.cr .facts div { display:flex; align-items:baseline; justify-content:space-between; gap:20px; padding:15px 0; border-bottom:1px solid rgba(236,228,208,.25); }
+.cr .facts dt { color:var(--muted); font-size:.98rem; }
+.cr .facts dd { font:800 2rem/1 var(--sans); letter-spacing:-.03em; color:var(--lime); white-space:nowrap; }
+
+/* CONTRIBUA */
+.cr .give { background:var(--lime); color:var(--forest); padding:88px 0 96px; }
+.cr .give-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:center; }
+.cr .give h2 { font-size:clamp(2.1rem,4vw,3.25rem); line-height:1.03; margin-bottom:20px; }
+.cr .give .lead { font-size:1.2rem; font-weight:500; max-width:40ch; }
+.cr .pay { background:var(--forest); color:var(--cream); border-radius:34px; padding:40px 38px; box-shadow:0 30px 60px rgba(10,33,30,.3); }
+.cr .pay h3 { font:700 1rem var(--sans); color:var(--muted); margin-bottom:16px; }
+.cr .chips { display:flex; flex-wrap:wrap; gap:10px; margin-bottom:28px; }
+.cr .chip { background:transparent; color:var(--cream); border:2px solid rgba(236,228,208,.35); border-radius:999px; padding:11px 20px; font:700 1rem var(--sans); cursor:pointer; transition:background .2s, color .2s, border-color .2s; }
+.cr .chip:hover { border-color:var(--cream); }
+.cr .chip[aria-pressed="true"] { background:var(--lime); border-color:var(--lime); color:var(--forest); }
+.cr .total { display:flex; align-items:baseline; gap:12px; margin-bottom:26px; }
+.cr .total b { font:800 clamp(3.4rem,7vw,5rem)/1 var(--sans); letter-spacing:-.03em; color:var(--lime); }
+.cr .total span { color:var(--muted); font-weight:600; }
+.cr .pay .btn { width:100%; padding:18px; font-size:1.06rem; }
+.cr .pay small { display:block; margin-top:14px; color:var(--muted); font-size:.9rem; text-align:center; }
+
+/* PARCEIROS */
+.cr .partners { padding:110px 0 100px; }
+.cr .partners-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:72px; align-items:start; }
+.cr .partners h2 { font-size:clamp(2rem,3.6vw,2.8rem); line-height:1.12; }
+.cr .plist { border-top:1px solid rgba(236,228,208,.28); }
+.cr .plist a { display:flex; align-items:baseline; justify-content:space-between; gap:20px; padding:26px 4px; border-bottom:1px solid rgba(236,228,208,.28); transition:padding .25s, color .25s, background .25s; }
+.cr .plist a:hover { padding-left:18px; padding-right:18px; color:var(--forest); background:var(--lime); }
+.cr .plist strong { font:800 clamp(1.5rem,2.8vw,2.1rem)/1.1 var(--sans); letter-spacing:-.03em; }
+.cr .plist span { font-weight:600; opacity:.8; }
+
+/* CONTATO */
+.cr .cta { background:var(--cream); color:var(--forest); padding:110px 0; text-align:center; }
+.cr .cta h2 { font-size:clamp(2.6rem,7vw,5.6rem); line-height:1; margin-bottom:22px; }
+.cr .cta p { font-size:1.18rem; max-width:46ch; margin:0 auto 34px; }
+.cr .cta .row { display:flex; flex-wrap:wrap; gap:12px; justify-content:center; }
+.cr .cta .btn-line { border-color:rgba(16,48,44,.4); color:var(--forest); }
+.cr .cta .btn-line:hover { border-color:var(--forest); }
+
+/* RODAPÉ */
+.cr .foot { background:var(--deep); padding:72px 0 36px; }
+.cr .foot-grid { display:grid; grid-template-columns:1.3fr 1fr 1fr; gap:48px; }
+.cr .foot .brand { font-size:2rem; margin-bottom:14px; }
+.cr .foot p, .cr .foot li { color:var(--muted); font-size:.98rem; }
+.cr .foot h4 { font:700 1rem var(--sans); margin-bottom:14px; color:var(--cream); }
+.cr .foot ul { list-style:none; display:grid; gap:8px; }
+.cr .foot a:hover { color:var(--lime); }
+.cr .legal { margin-top:56px; padding-top:22px; border-top:1px solid rgba(236,228,208,.15); font-size:.86rem; color:rgba(236,228,208,.55); }
+
+@media (max-width:920px) {
+  .cr .menu { position:absolute; left:0; right:0; top:72px; background:var(--deep); flex-direction:column; align-items:flex-start; gap:0; padding:8px 28px 22px; border-bottom:1px solid rgba(236,228,208,.15); display:none; }
+  .cr .menu.open { display:flex; }
+  .cr .menu a:not(.btn) { padding:14px 0; width:100%; border-bottom:1px solid rgba(236,228,208,.1); }
+  .cr .menu .btn { margin-top:16px; }
+  .cr .burger { display:block; }
+  .cr .hero { padding:56px 0 64px; min-height:0; }
+  .cr .hero-grid, .cr .impact-head, .cr .about-grid, .cr .give-grid, .cr .partners-grid, .cr .proj, .cr .proj.flip { grid-template-columns:1fr; gap:36px; }
+  .cr .proj.flip .mcol { order:0; }
+  .cr .cloud { left:44%; top:34%; }
+  .cr .sun { width:380px; height:380px; right:-170px; top:auto; bottom:-120px; }
+  .cr .sun-sky { display:none; }
+  .cr .hero-copy p { max-width:none; }
+  .cr .figures { grid-template-columns:1fr; }
+  .cr .fig, .cr .fig + .fig { padding:24px 0; border-left:0; border-bottom:1px solid rgba(16,48,44,.25); }
+  .cr .mission { grid-template-columns:1fr; padding:34px 28px; }
+  .cr .foot-grid { grid-template-columns:1fr; gap:34px; }
+  .cr .about, .cr .projects, .cr .give, .cr .partners, .cr .cta, .cr .impact { padding-top:72px; padding-bottom:72px; }
+  .cr .proj { padding-bottom:64px; }
+}
+@media (prefers-reduced-motion:reduce) { .cr .cloud, .cr .strip-track { animation:none; } .cr { scroll-behavior:auto; } }
+</style>
+
+<div class="cr" id="cr-root">
+
+  <!-- MENU -->
+  <header class="nav">
+    <div class="wrap nav-in">
+      <a class="brand serif" href="#cr-topo" aria-label="Céu na Rua, início">Céu na Rua <small>A Ponte BH</small></a>
+      <button class="burger" id="cr-burger" aria-label="Menu de navegação" aria-expanded="false" aria-controls="cr-menu"><span></span><span></span><span></span></button>
+      <nav class="menu" id="cr-menu" aria-label="Seções da página">
+        <a href="#cr-portal">O Portal</a>
+        <a href="#cr-projetos">Projetos</a>
+        <a href="#cr-parceiros">Parceiros</a>
+        <a href="#cr-contato">Contato</a>
+        <a class="btn btn-lime" href="#cr-contribua">Contribuir</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="cr-topo">
+    <div class="sun" aria-hidden="true"></div>
+    <div class="sun-sky" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <h1 class="wordmark"><img class="logo" src="https://comunicaponte.github.io/ceu-na-rua/logo-ceu-na-rua.png" alt="Céu na Rua" width="1175" height="779">
+          <svg class="cloud" viewBox="0 0 240 130" aria-hidden="true">
+            <defs><linearGradient id="crc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".7" stop-color="#e9e4d6"/><stop offset="1" stop-color="#a9b0b2"/></linearGradient></defs>
+            <g fill="url(#crc)"><circle cx="66" cy="74" r="38"/><circle cx="112" cy="52" r="46"/><circle cx="166" cy="72" r="36"/><rect x="36" y="76" width="168" height="40" rx="20"/></g>
+          </svg>
+        </h1>
+        <div class="hero-copy">
+          <div class="hero-panel">
+            <h2 class="serif">Em Belo Horizonte como no Céu!</h2>
+            <p>O Céu na Rua é um convite da Igreja A Ponte BH para viver o Evangelho na cidade. Por meio do Portal, caminhamos com moradores, voluntários e organizações que cuidam das comunidades de Belo Horizonte. Você também pode fazer parte desse trabalho.</p>
+            <div class="hero-actions">
+              <a class="btn btn-dark" href="#cr-projetos">Conheça os projetos</a>
+              <a class="btn btn-line" href="#cr-contribua">Quero contribuir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTRIBUA -->
+  <section class="give" id="cr-contribua">
+    <div class="wrap">
+      <div class="give-grid">
+        <div>
+          <span class="pill">Contribuição mensal</span>
+          <h2 class="serif">Ajude a dar continuidade ao trabalho do Portal</h2>
+          <p class="lead">O cuidado que você vai conhecer nesta página acontece ao longo de todo o ano. Com uma contribuição mensal, você participa da continuidade dos projetos do Portal.</p>
+        </div>
+        <div class="pay">
+          <h3>Quanto você gostaria de contribuir por mês?</h3>
+          <div class="chips" role="group" aria-label="Valor mensal de contribuição">
+            <button type="button" class="chip" data-v="50" data-href="https://www.asaas.com/c/oissi0gz55dmevkc" aria-pressed="false">R$ 50</button>
+            <button type="button" class="chip" data-v="100" data-href="https://www.asaas.com/c/p36w1e3xgkhc98mv" aria-pressed="false">R$ 100</button>
+            <button type="button" class="chip" data-v="250" data-href="https://www.asaas.com/c/shfiji32gwb8pdez" aria-pressed="true">R$ 250</button>
+            <button type="button" class="chip" data-v="500" data-href="https://www.asaas.com/c/ag3svj3vnrvpu2xb" aria-pressed="false">R$ 500</button>
+            <button type="button" class="chip" data-v="1.000" data-href="https://www.asaas.com/c/1uwuoindvukewua1" aria-pressed="false">R$ 1.000</button>
+          </div>
+          <div class="total"><b id="cr-total">R$ 250</b><span>por mês</span></div>
+          <a class="btn btn-lime" id="cr-pay" href="https://www.asaas.com/c/shfiji32gwb8pdez" target="_blank" rel="noopener">Ir para a página de contribuição</a>
+          <small>A página de contribuição da Igreja A Ponte BH será aberta em uma nova aba.</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACTO -->
+  <section class="impact" id="cr-impacto">
+    <div class="wrap">
+      <div class="band band-top"><img src="https://comunicaponte.github.io/ceu-na-rua/div-1.jpg" alt="Crianças lendo deitadas em almofadas" style="object-position:50% 30%"></div>
+      <div class="impact-head">
+        <div class="hd"><span class="pill">O Portal em números</span><h2 class="serif">Quem participa desse trabalho</h2></div>
+        <p>Os projetos reúnem crianças, adolescentes e famílias das comunidades onde o Portal atua. Voluntários da igreja também participam, dedicando tempo ao cuidado de outras pessoas.</p>
+      </div>
+      <div class="figures">
+        <div class="fig"><b class="serif"><em class="mais">Mais de</em>530</b><span>crianças e adolescentes atendidos</span></div>
+        <div class="fig"><b class="serif"><em class="mais">Mais de</em>440</b><span>famílias acompanhadas</span></div>
+        <div class="fig"><b class="serif"><em class="mais">Mais de</em>100</b><span>voluntários em atuação</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- O PORTAL -->
+  <section class="about" id="cr-portal">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="hd"><span class="pill">O Portal</span><h2 class="serif">Como a Ponte vive sua missão na cidade</h2></div>
+        <div class="txt">
+          <p>O Portal é o braço missional da Igreja A Ponte BH. Por meio dele, anunciamos o Evangelho e participamos da vida das comunidades, atentos ao que os moradores têm a dizer sobre o lugar onde vivem.</p>
+          <p>Esse compromisso ganha forma nas quadras, nas oficinas, nas casas de acolhimento e nas conversas com as famílias. Em cada lugar, procuramos conhecer as pessoas pelo nome, ouvir o que elas têm a dizer e servir junto com quem já cuida da comunidade.</p>
+        </div>
+      </div>
+      <figure class="about-photo">
+        <img src="https://comunicaponte.github.io/ceu-na-rua/sala-de-aula.jpg" alt="Crianças lendo deitadas em almofadas durante uma atividade">
+        <div class="mission">
+          <h3 class="serif">Nossa missão</h3>
+          <p>Anunciar o Reino de Deus e servir ao próximo, promovendo justiça e fortalecendo os vínculos que sustentam a vida em comunidade.</p>
+        </div>
+      </figure>
+    </div>
+  </section>
+
+  <!-- FAIXA -->
+  <div class="strip serif" aria-hidden="true">
+    <div class="strip-track">
+      <span>Ser ponte na cidade <svg viewBox="0 0 240 130"><g fill="#10302c"><circle cx="66" cy="74" r="38"/><circle cx="112" cy="52" r="46"/><circle cx="166" cy="72" r="36"/><rect x="36" y="76" width="168" height="40" rx="20"/></g></svg> Em Belo Horizonte como no Céu <svg viewBox="0 0 240 130"><g fill="#10302c"><circle cx="66" cy="74" r="38"/><circle cx="112" cy="52" r="46"/><circle cx="166" cy="72" r="36"/><rect x="36" y="76" width="168" height="40" rx="20"/></g></svg></span>
+      <span>Ser ponte na cidade <svg viewBox="0 0 240 130"><g fill="#10302c"><circle cx="66" cy="74" r="38"/><circle cx="112" cy="52" r="46"/><circle cx="166" cy="72" r="36"/><rect x="36" y="76" width="168" height="40" rx="20"/></g></svg> Em Belo Horizonte como no Céu <svg viewBox="0 0 240 130"><g fill="#10302c"><circle cx="66" cy="74" r="38"/><circle cx="112" cy="52" r="46"/><circle cx="166" cy="72" r="36"/><rect x="36" y="76" width="168" height="40" rx="20"/></g></svg></span>
+    </div>
+  </div>
+
+  <!-- PROJETOS -->
+  <section class="projects" id="cr-projetos">
+    <div class="wrap">
+      <div class="projects-head">
+        <div class="hd"><span class="pill">Projetos</span><h2 class="serif">Conheça o trabalho de perto</h2></div>
+        <p>Na Vila Paquetá, nas casas de acolhimento e na Pedreira Padre Lopes, o cuidado assume formas diferentes. Conheça as pessoas e as iniciativas que fazem parte dessa caminhada.</p>
+      </div>
+
+      <article class="proj">
+        <div class="mcol"><div class="media">
+          <svg class="art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="600" fill="#a3c62f"/><circle cx="560" cy="210" r="170" fill="#ece4d0"/><circle cx="560" cy="210" r="110" fill="#a8c3ee"/><path d="M0 470 Q200 400 400 460 T800 430 V600 H0Z" fill="#10302c"/><path d="M0 530 Q220 480 430 520 T800 505 V600 H0Z" fill="#0a211e"/></svg>
+          <img src="https://comunicaponte.github.io/ceu-na-rua/vila-paqueta.jpg" alt="Crianças e adolescentes em atividade no tatame, na Vila Paquetá" onerror="this.style.display='none'">
+        </div></div>
+        <div class="proj-text">
+          <span class="where">Vila Paquetá, região da Pampulha</span>
+          <h3 class="serif">Portal na Vila Paquetá</h3>
+          <p>Desde 2021, o Portal caminha com os moradores da Vila Paquetá. Foi ouvindo as famílias que conhecemos melhor as necessidades da vila e a importância de uma liderança da própria comunidade para defender suas prioridades.</p>
+          <p>Hoje, crianças e adolescentes se encontram nas atividades esportivas e nas oficinas. A Igreja A Ponte BH também está presente na vila, com cultos e grupos de relacionamento que fazem parte da vida da comunidade.</p>
+          <dl class="facts">
+            <div><dt>Crianças atendidas diretamente</dt><dd>109</dd></div>
+            <div><dt>Famílias alcançadas indiretamente</dt><dd>80</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="proj flip">
+        <div class="mcol"><div class="media" style="background:#a8c3ee">
+          <svg class="art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="600" fill="#a8c3ee"/><circle cx="240" cy="230" r="150" fill="#a3c62f"/><g fill="#ece4d0"><circle cx="520" cy="180" r="52"/><circle cx="590" cy="160" r="64"/><circle cx="665" cy="185" r="50"/><rect x="480" y="185" width="230" height="52" rx="26"/></g><path d="M0 440 Q220 380 430 440 T800 410 V600 H0Z" fill="#10302c"/></svg>
+          <img src="https://comunicaponte.github.io/ceu-na-rua/projeto-acolher.jpg" alt="Voluntárias e crianças montam pulseiras de miçangas em uma casa de acolhimento" onerror="this.style.display='none'">
+        </div></div>
+        <div class="proj-text">
+          <span class="where">Casas de acolhimento em Belo Horizonte</span>
+          <h3 class="serif">Projeto Acolher</h3>
+          <p>Toda semana, voluntários do Projeto Acolher visitam casas que recebem crianças e adolescentes em Belo Horizonte.</p>
+          <p>Voltar à mesma casa e encontrar de novo cada criança faz parte do cuidado. É nessa convivência que os voluntários constroem vínculos, abrem espaço para ouvir e compartilham a Palavra de Deus.</p>
+          <dl class="facts">
+            <div><dt>Casas de acolhimento visitadas</dt><dd>6</dd></div>
+            <div><dt>Voluntários participantes</dt><dd>57</dd></div>
+          </dl>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="mcol"><div class="media" style="background:#ece4d0">
+          <svg class="art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="600" fill="#ece4d0"/><circle cx="400" cy="640" r="380" fill="#a3c62f"/><circle cx="400" cy="640" r="250" fill="#a8c3ee"/><circle cx="400" cy="640" r="130" fill="#10302c"/></svg>
+          <img src="https://comunicaponte.github.io/ceu-na-rua/lar-dorcas.jpg" alt="Crianças e uma voluntária desenhando juntas em uma oficina do Lar Dorcas" onerror="this.style.display='none'">
+        </div></div>
+        <div class="proj-text">
+          <span class="where">Pedreira Padre Lopes, Belo Horizonte</span>
+          <h3 class="serif">Lar Dorcas</h3>
+          <p>Desde 1984, a Organização Social Lar Dorcas atua na região da Pedreira Padre Lopes. A instituição oferece educação infantil a crianças de 2 a 5 anos.</p>
+          <p>No Projeto Aurora, crianças e adolescentes de 6 a 15 anos participam de oficinas que complementam sua formação e fortalecem os vínculos com a família e a comunidade.</p>
+          <dl class="facts">
+            <div><dt>Crianças e adolescentes atendidos diretamente</dt><dd>267</dd></div>
+            <div><dt>Famílias alcançadas indiretamente</dt><dd>248</dd></div>
+          </dl>
+        </div>
+      </article>
+      <div class="band band-end"><img src="https://comunicaponte.github.io/ceu-na-rua/div-2.jpg" alt="Duas adolescentes de luvas de boxe diante de um mural" style="object-position:50% 50%"></div>
+    </div>
+  </section>
+
+  <!-- PARCEIROS -->
+  <section class="partners" id="cr-parceiros">
+    <div class="wrap">
+      <div class="partners-grid">
+        <div class="hd"><span class="pill">Parceiros</span><h2 class="serif">Quem caminha com a gente</h2></div>
+        <div class="plist">
+          <a href="https://www.instagram.com/ongterrasanta/" target="_blank" rel="noopener"><strong class="serif">ONG Terra Santa</strong><span>@ongterrasanta</span></a>
+          <a href="https://www.instagram.com/cristohousebr/" target="_blank" rel="noopener"><strong class="serif">Cristo House</strong><span>@cristohousebr</span></a>
+          <a href="https://www.instagram.com/lovemovimento/" target="_blank" rel="noopener"><strong class="serif">Projeto Love</strong><span>@lovemovimento</span></a>
+          <a href="https://www.instagram.com/institutoogrito/" target="_blank" rel="noopener"><strong class="serif">Instituto O Grito</strong><span>@institutoogrito</span></a>
+        </div>
+      </div>
+      <div class="band band-end"><img src="https://comunicaponte.github.io/ceu-na-rua/div-3.jpg" alt="Crianças fazendo atividades numa mesa ao ar livre, à noite" style="object-position:50% 55%"></div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="cta" id="cr-contato">
+    <div class="wrap">
+      <h2 class="serif">Venha servir com a gente</h2>
+      <p>Se você quer conhecer um projeto de perto ou saber como participar como voluntário, fale com a nossa equipe pelo WhatsApp. Vamos conversar sobre as formas de servir.</p>
+      <div class="row">
+        <a class="btn btn-dark" href="https://wa.me/5531972340244" target="_blank" rel="noopener">Conversar pelo WhatsApp</a>
+        <a class="btn btn-line" href="https://www.instagram.com/aponte_bh/" target="_blank" rel="noopener">Acompanhar a Ponte no Instagram</a>
+        <a class="btn btn-line" href="https://www.instagram.com/portal_apontebh/?hl=pt-br" target="_blank" rel="noopener">Acompanhar o Portal no Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="brand serif">Céu na Rua</div>
+          <p>Um movimento da Igreja A Ponte BH para viver o Evangelho na cidade. Seja a Ponte.</p>
+        </div>
+        <div>
+          <h4>Onde estamos</h4>
+          <ul>
+            <li>Igreja A Ponte BH, Campus Castelo<br>Rua Castelo de Sintra, 968, Castelo</li>
+            <li>Igreja A Ponte BH, Campus Zona Sul<br>Av. Raja Gabaglia, 3950, 7º andar</li>
+            <li>Portal na Vila Paquetá<br>Rua Campo Basso, 247, Bandeirantes</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Fale com a gente</h4>
+          <ul>
+            <li><a href="https://wa.me/5531972340244" target="_blank" rel="noopener">(31) 97234-0244</a></li>
+            <li><a href="https://www.instagram.com/aponte_bh/" target="_blank" rel="noopener">@aponte_bh</a></li>
+            <li><a href="https://apontebh.com.br" target="_blank" rel="noopener">apontebh.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal">© 2026 Igreja A Ponte BH. Todos os direitos reservados.</div>
+    </div>
+  </footer>
+</div>
+
+<script>
+(function () {
+  try {
+    var root = document.getElementById('cr-root');
+    var burger = document.getElementById('cr-burger');
+    var menu = document.getElementById('cr-menu');
+    if (burger && menu) {
+      burger.addEventListener('click', function () {
+        var open = menu.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      menu.addEventListener('click', function (e) {
+        if (e.target.tagName === 'A') { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false'); }
+      });
+    }
+    var chips = root.querySelectorAll('.chip');
+    var total = document.getElementById('cr-total');
+    var pay = document.getElementById('cr-pay');
+    for (var i = 0; i < chips.length; i++) {
+      chips[i].addEventListener('click', function () {
+        for (var j = 0; j < chips.length; j++) chips[j].setAttribute('aria-pressed', 'false');
+        this.setAttribute('aria-pressed', 'true');
+        var v = this.getAttribute('data-v');
+        total.textContent = 'R$ ' + v;
+        var h = this.getAttribute('data-href');
+        if (pay && h) pay.href = h;
+      });
+    }
+  } catch (e) { /* a página funciona sem o script */ }
+})();
+</script>
