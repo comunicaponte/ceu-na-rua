@@ -82,10 +82,10 @@
 .cr .impact-head { display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:end; margin-bottom:56px; }
 .cr .impact-head h2 { font-size:clamp(2rem,3.7vw,2.95rem); line-height:1.12; }
 .cr .impact-head p { font-size:1.14rem; max-width:44ch; }
-.cr .figures { display:grid; grid-template-columns:repeat(3,1fr); border-top:2px solid var(--forest); }
+.cr .figures { display:grid; grid-template-columns:repeat(4,1fr); border-top:2px solid var(--forest); }
 .cr .fig { padding:30px 28px 8px 0; }
 .cr .fig + .fig { padding-left:28px; border-left:1px solid rgba(16,48,44,.25); }
-.cr .fig b { display:block; font:800 clamp(3.6rem,8vw,6.4rem)/.95 var(--sans); letter-spacing:-.03em; letter-spacing:-.03em; }
+.cr .fig b { display:block; font:800 clamp(3.4rem,6.2vw,5.2rem)/.95 var(--sans); letter-spacing:-.03em; letter-spacing:-.03em; }
 .cr .fig span { display:block; margin-top:12px; font-weight:600; font-size:1.04rem; max-width:20ch; }
 
 /* PORTAL */
@@ -208,6 +208,93 @@
   .cr .about, .cr .projects, .cr .give, .cr .partners, .cr .cta, .cr .impact { padding-top:72px; padding-bottom:72px; }
   .cr .proj { padding-bottom:64px; }
 }
+
+/* CITAÇÕES, VERSÍCULOS, BOTÕES */
+.cr .actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:40px; }
+.cr .actions .btn-line { border-color:rgba(236,228,208,.45); color:var(--cream); }
+.cr .actions.on-light .btn-line { border-color:rgba(16,48,44,.4); color:var(--forest); }
+.cr .actions.on-light .btn-line:hover { border-color:var(--forest); }
+.cr .verse { margin:34px 0 0; padding-left:20px; border-left:3px solid currentColor; }
+.cr .verse blockquote { font-size:clamp(1.25rem,2vw,1.55rem); line-height:1.3; font-weight:400; font-style:italic; margin:0; }
+.cr .verse figcaption { margin-top:8px; font:700 .92rem var(--sans); letter-spacing:.04em; opacity:.85; }
+.cr .quote { margin:0; padding:88px 0; text-align:center; }
+.cr .q-sky { background:var(--sky); color:var(--forest); }
+.cr .q-lime { background:var(--lime); color:var(--forest); }
+.cr .quote .wrap { max-width:780px; }
+.cr .qm { display:block; font-size:6rem; line-height:.6; height:.5em; margin-bottom:18px; opacity:.35; }
+.cr .quote blockquote { margin:0; font-size:clamp(1.25rem,2.3vw,1.8rem); line-height:1.4; font-weight:400; font-style:italic; }
+.cr .quote figcaption { margin-top:30px; display:flex; flex-direction:column; gap:3px; }
+.cr .quote figcaption b { font-size:1.05rem; }
+.cr .quote figcaption span { font-size:.92rem; opacity:.8; }
+.cr .stories { background:var(--cream); color:var(--forest); padding:100px 0 104px; }
+.cr .stories-head { margin-bottom:64px; max-width:760px; }
+.cr .stories h2 { font-size:clamp(2rem,3.7vw,2.95rem); line-height:1.12; }
+.cr .story-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:22px; }
+.cr .story { margin:0; background:#f6f0e0; border-radius:28px; padding:0 26px 28px; text-align:center; margin-top:84px; border:1px solid rgba(16,48,44,.1); }
+.cr .story:nth-child(even) { margin-top:128px; }
+.cr .story img { width:152px; height:152px; border-radius:50%; object-fit:cover; display:block; margin:-76px auto 22px; border:6px solid var(--cream); box-shadow:0 14px 30px rgba(16,48,44,.18); }
+.cr .story blockquote { margin:0; font-size:1.02rem; line-height:1.6; }
+.cr .story figcaption { margin-top:18px; display:flex; flex-direction:column; gap:2px; }
+.cr .story figcaption b { font-size:1.05rem; }
+.cr .story figcaption span { font-size:.92rem; opacity:.75; }
+.cr .stories .actions { margin-top:64px; }
+.cr .mapa { padding:110px 0 104px; }
+.cr .mapa-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:56px; align-items:center; }
+.cr .mapa h2 { font-size:clamp(2rem,3.7vw,2.95rem); line-height:1.12; }
+.cr .mapa-txt > p { color:var(--muted); font-size:1.12rem; max-width:44ch; }
+.cr .places { list-style:none; margin:28px 0 0; padding:0; border-top:1px solid rgba(236,228,208,.25); }
+.cr .places li { display:flex; gap:16px; align-items:center; padding:12px 0; border-bottom:1px solid rgba(236,228,208,.25); }
+.cr .places i { flex:none; width:32px; height:32px; border-radius:50%; background:var(--lime); color:var(--forest); font:800 .95rem/32px var(--sans); text-align:center; font-style:normal; }
+.cr .places b { display:block; font-size:1.05rem; }
+.cr .places span { color:var(--muted); font-size:.92rem; }
+.cr .mapa .verse { color:var(--lime); margin-top:30px; }
+.cr .mapa .actions { margin-top:30px; }
+.cr .mapa-fig { display:grid; gap:22px; }
+.cr .mapa-svg.z-d { max-width:600px; }
+.cr .mapa-svg, .cr .bh-svg { width:100%; height:auto; display:block; }
+.cr .mapa-svg { max-width:560px; margin:0 auto; }
+.cr .mapa-svg .uf { fill:#1a4640; stroke:var(--lime); stroke-width:4; stroke-linejoin:round; }
+.cr .mapa-svg .bh-halo { fill:var(--lime); opacity:.14; }
+.cr .mapa-svg .bh-halo2 { fill:var(--lime); opacity:.25; }
+.cr .mapa-svg .bh-dot { fill:var(--lime); }
+.cr .pin circle { fill:var(--lime); }
+.cr .pin .ring { fill:none; stroke:var(--lime); stroke-width:3; opacity:.4; }
+.cr .pin text { fill:var(--forest); font:800 24px var(--sans); }
+.cr .pin.church circle { fill:var(--cream); }
+.cr .pin.church .ring { stroke:var(--cream); }
+.cr .lab text { fill:var(--cream); font:700 30px var(--sans); paint-order:stroke; stroke:#1a4640; stroke-width:7px; stroke-linejoin:round; }
+.cr .lab text.sub { font-size:21px; font-weight:600; opacity:.85; }
+.cr .mapa-svg .cone { fill:rgba(163,198,47,.1); stroke:rgba(163,198,47,.45); stroke-width:2; stroke-dasharray:8 8; }
+.cr .bub { fill:#143a35; stroke:var(--lime); stroke-width:5; }
+.cr .bub-ring { fill:none; stroke:rgba(163,198,47,.25); stroke-width:2; stroke-dasharray:6 8; }
+.cr .bh-solo, .cr .bh-defs { display:block; }
+.cr .ttl { fill:var(--cream); font:700 22px var(--serif); }
+.cr .pin text { font-size:21px; }
+.cr .lab text { font-size:27px; }
+.cr .mapa-fig .z-m { display:none; }
+.cr .mapa-fig .bh-solo { width:100%; max-width:480px; margin:0 auto; height:auto; }
+.cr .places li.church i { background:var(--cream); }
+@media (max-width:920px) {
+  .cr .quote { padding:72px 0; }
+  .cr .qm { font-size:6rem; }
+  .cr .stories, .cr .mapa { padding-top:72px; padding-bottom:72px; }
+  .cr .story-grid { grid-template-columns:1fr 1fr; gap:22px; }
+  .cr .story:nth-child(even) { margin-top:84px; }
+  .cr .mapa-grid { grid-template-columns:1fr; gap:40px; }
+  .cr .mapa-fig { order:-1; }
+  .cr .mapa-fig .z-d { display:none; }
+  .cr .mapa-fig .z-m { display:block; }
+  .cr .figures { grid-template-columns:1fr 1fr; }
+  .cr .fig, .cr .fig + .fig { padding:24px 16px 24px 0; }
+}
+@media (max-width:620px) {
+  .cr .story-grid { grid-template-columns:1fr; }
+  .cr .figures { grid-template-columns:1fr; }
+  .cr .fig, .cr .fig + .fig { padding:24px 0; }
+  .cr .mapa-svg .lab text { font-size:40px; }
+  .cr .mapa-svg .lab text.sub { font-size:28px; }
+  .cr .actions .btn { flex:1 1 100%; }
+}
 @media (prefers-reduced-motion:reduce) { .cr .cloud, .cr .strip-track { animation:none; } .cr { scroll-behavior:auto; } }
 </style>
 
@@ -243,7 +330,7 @@
         <div class="hero-copy">
           <div class="hero-panel">
             <h2 class="serif">Em Belo Horizonte como no Céu!</h2>
-            <p>O Céu na Rua é um convite da Igreja A Ponte BH para viver o Evangelho na cidade. Por meio do Portal, caminhamos com moradores, voluntários e organizações que cuidam das comunidades de Belo Horizonte. Você também pode fazer parte desse trabalho.</p>
+            <p>O Céu na Rua é um convite da Igreja A Ponte BH para viver o Evangelho na cidade. Por meio do Portal, caminhamos com moradores, voluntários e organizações que cuidam das comunidades de Belo Horizonte. Você também é chamado a fazer parte do que Deus está fazendo em nossa cidade.</p>
             <div class="hero-actions">
               <a class="btn btn-dark" href="#cr-projetos">Conheça os projetos</a>
               <a class="btn btn-line" href="#cr-contribua">Quero contribuir</a>
@@ -260,8 +347,9 @@
       <div class="give-grid">
         <div>
           <span class="pill">Contribuição mensal</span>
-          <h2 class="serif">Ajude a dar continuidade ao trabalho do Portal</h2>
-          <p class="lead">O cuidado que você vai conhecer nesta página acontece ao longo de todo o ano. Com uma contribuição mensal, você participa da continuidade dos projetos do Portal.</p>
+          <h2 class="serif">Precisamos da sua ajuda para que o Portal continue em 2027!</h2>
+          <p class="lead">Esse trabalho que transforma tantas vidas precisa da sua ajuda para continuar. É com a sua contribuição mensal que seguiremos mudando tantas vidas por meio do Evangelho de Cristo e do serviço de amor ao próximo!</p>
+          <figure class="verse"><blockquote class="serif">“Quem se compadece do pobre empresta ao Senhor.”</blockquote><figcaption>Provérbios 19:17</figcaption></figure>
         </div>
         <div class="pay">
           <h3>Quanto você gostaria de contribuir por mês?</h3>
@@ -289,12 +377,22 @@
         <p>Os projetos reúnem crianças, adolescentes e famílias das comunidades onde o Portal atua. Voluntários da igreja também participam, dedicando tempo ao cuidado de outras pessoas.</p>
       </div>
       <div class="figures">
-        <div class="fig"><b class="serif"><em class="mais">Mais de</em>530</b><span>crianças e adolescentes atendidos</span></div>
-        <div class="fig"><b class="serif"><em class="mais">Mais de</em>440</b><span>famílias acompanhadas</span></div>
-        <div class="fig"><b class="serif"><em class="mais">Mais de</em>100</b><span>voluntários em atuação</span></div>
+        <div class="fig"><b class="serif">+530</b><span>crianças e adolescentes atendidos</span></div>
+        <div class="fig"><b class="serif">+440</b><span>famílias acompanhadas</span></div>
+        <div class="fig"><b class="serif">+100</b><span>voluntários em atuação</span></div>
+        <div class="fig"><b class="serif">+26</b><span>projetos em andamento</span></div>
       </div>
+      <div class="actions on-light"><a class="btn btn-dark" href="#cr-contato">Faça parte</a><a class="btn btn-line" href="#cr-contribua">Contribua</a></div>
     </div>
   </section>
+
+  <!-- CITAÇÃO KELLER -->
+  <figure class="quote q-sky">
+    <div class="wrap"><span class="qm serif" aria-hidden="true">“</span>
+      <blockquote class="serif">Fazer justiça inclui não apenas corrigir injustiças, mas também generosidade e preocupação social, especialmente com os pobres e vulneráveis.</blockquote>
+      <figcaption><b>Timothy Keller</b><span>Generous Justice (2010), p. 23</span></figcaption>
+    </div>
+  </figure>
 
   <!-- O PORTAL -->
   <section class="about" id="cr-portal">
@@ -329,7 +427,7 @@
     <div class="wrap">
       <div class="projects-head">
         <div class="hd"><span class="pill">Projetos</span><h2 class="serif">Conheça o trabalho de perto</h2></div>
-        <p>Na Vila Paquetá, nas casas de acolhimento e na Pedreira Padre Lopes, o cuidado assume formas diferentes. Conheça as pessoas e as iniciativas que fazem parte dessa caminhada.</p>
+        <p>Da Vila Paquetá ao Sertão de Minas, nas casas de acolhimento, na Pedreira Prado Lopes e no Ressaca, o cuidado assume formas diferentes. Conheça as pessoas e as iniciativas que fazem parte dessa caminhada.</p>
       </div>
 
       <article class="proj">
@@ -343,8 +441,8 @@
           <p>Desde 2021, o Portal caminha com os moradores da Vila Paquetá. Foi ouvindo as famílias que conhecemos melhor as necessidades da vila e a importância de uma liderança da própria comunidade para defender suas prioridades.</p>
           <p>Hoje, crianças e adolescentes se encontram nas atividades esportivas e nas oficinas. A Igreja A Ponte BH também está presente na vila, com cultos e grupos de relacionamento que fazem parte da vida da comunidade.</p>
           <dl class="facts">
-            <div><dt>Crianças atendidas diretamente</dt><dd>109</dd></div>
-            <div><dt>Famílias alcançadas indiretamente</dt><dd>80</dd></div>
+            <div><dt>Crianças atendidas</dt><dd>+270</dd></div>
+            <div><dt>Atendimentos odontológicos gratuitos</dt><dd>+150</dd></div>
           </dl>
         </div>
       </article>
@@ -360,8 +458,8 @@
           <p>Toda semana, voluntários do Projeto Acolher visitam casas que recebem crianças e adolescentes em Belo Horizonte.</p>
           <p>Voltar à mesma casa e encontrar de novo cada criança faz parte do cuidado. É nessa convivência que os voluntários constroem vínculos, abrem espaço para ouvir e compartilham a Palavra de Deus.</p>
           <dl class="facts">
-            <div><dt>Casas de acolhimento visitadas</dt><dd>6</dd></div>
-            <div><dt>Voluntários participantes</dt><dd>57</dd></div>
+            <div><dt>Casas de acolhimento visitadas</dt><dd>+6</dd></div>
+            <div><dt>Voluntários participantes</dt><dd>+57</dd></div>
           </dl>
         </div>
       </article>
@@ -372,19 +470,125 @@
           <img src="lar-dorcas.jpg" alt="Crianças e uma voluntária desenhando juntas em uma oficina do Lar Dorcas" onerror="this.style.display='none'">
         </div></div>
         <div class="proj-text">
-          <span class="where">Pedreira Padre Lopes, Belo Horizonte</span>
+          <span class="where">Pedreira Prado Lopes, Belo Horizonte</span>
           <h3 class="serif">Lar Dorcas</h3>
-          <p>Desde 1984, a Organização Social Lar Dorcas atua na região da Pedreira Padre Lopes. A instituição oferece educação infantil a crianças de 2 a 5 anos.</p>
+          <p>Desde 1984, a Organização Social Lar Dorcas atua na região da Pedreira Prado Lopes. A instituição oferece educação infantil a crianças de 2 a 5 anos.</p>
           <p>No Projeto Aurora, crianças e adolescentes de 6 a 15 anos participam de oficinas que complementam sua formação e fortalecem os vínculos com a família e a comunidade.</p>
           <dl class="facts">
-            <div><dt>Crianças e adolescentes atendidos diretamente</dt><dd>267</dd></div>
-            <div><dt>Famílias alcançadas indiretamente</dt><dd>248</dd></div>
+            <div><dt>Crianças e adolescentes atendidos por ano</dt><dd>+260</dd></div>
+            <div><dt>Famílias atendidas</dt><dd>+260</dd></div>
+            <div><dt>Estudantes formados</dt><dd>+2500</dd></div>
           </dl>
         </div>
       </article>
+      <article class="proj flip">
+        <div class="mcol"><div class="media" style="background:#a8c3ee">
+          <svg class="art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="600" fill="#a8c3ee"/><circle cx="560" cy="210" r="170" fill="#ece4d0"/><circle cx="560" cy="210" r="110" fill="#a3c62f"/><path d="M0 470 Q200 400 400 460 T800 430 V600 H0Z" fill="#10302c"/></svg>
+          <img src="sao-romao.jpg" alt="Voluntária caminha de mãos dadas com uma criança por uma rua de terra em São Romão, seguidas por moradores" onerror="this.style.display='none'">
+        </div></div>
+        <div class="proj-text">
+          <span class="where">Sertão de Minas, Norte de Minas Gerais</span>
+          <h3 class="serif">São Romão</h3>
+          <p>O Portal também está presente em São Romão, no Norte de Minas Gerais, desenvolvendo ações sociais e missionárias em parceria com lideranças locais, fortalecendo vínculos e promovendo o cuidado com as famílias da região.</p>
+          <p>Por meio da mobilização de voluntários, são realizadas ações de distribuição de alimentos e cestas básicas, atendimentos de saúde e odontológicos, cortes de cabelo, atividades educativas, esportivas e recreativas para crianças e adolescentes, além de visitas às famílias e momentos de escuta e acolhimento.</p>
+        </div>
+      </article>
+
+      <article class="proj">
+        <div class="mcol"><div class="media" style="background:#a3c62f">
+          <svg class="art" viewBox="0 0 800 600" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="800" height="600" fill="#a3c62f"/><circle cx="240" cy="230" r="150" fill="#ece4d0"/><circle cx="240" cy="230" r="90" fill="#a8c3ee"/><path d="M0 440 Q220 380 430 440 T800 410 V600 H0Z" fill="#10302c"/></svg>
+          <img src="ressaca.jpg" alt="Três profissionais de saúde atendem em uma mesa, na cozinha comunitária do Ressaca" onerror="this.style.display='none'">
+        </div></div>
+        <div class="proj-text">
+          <span class="where">Ressaca, Contagem</span>
+          <h3 class="serif">Ressaca</h3>
+          <p>O Portal atua na comunidade do Ressaca promovendo cuidado, acolhimento e desenvolvimento comunitário.</p>
+          <p>Entre as iniciativas estão a cozinha comunitária, que oferece almoço para crianças de segunda a sexta-feira, atividades educativas e recreativas da Pontezinha, grupos de relacionamento e atendimentos de saúde e odontológicos, contribuindo para o bem-estar e o fortalecimento das famílias da região.</p>
+        </div>
+      </article>
+      <div class="actions"><a class="btn btn-lime" href="#cr-contato">Faça parte</a><a class="btn btn-line" href="#cr-contribua">Contribua</a></div>
       <div class="band band-end"><img src="div-2.jpg" alt="Duas adolescentes de luvas de boxe diante de um mural" style="object-position:50% 50%"></div>
     </div>
   </section>
+
+  <!-- CITAÇÃO STOTT -->
+  <figure class="quote q-lime">
+    <div class="wrap"><span class="qm serif" aria-hidden="true">“</span>
+      <blockquote class="serif">A responsabilidade social torna-se um aspecto não apenas da missão cristã, mas também da conversão cristã. É impossível ser verdadeiramente convertido a Deus sem ser também convertido ao próximo.</blockquote>
+      <figcaption><b>John Stott</b><span>Christian Mission in the Modern World, p. 93</span></figcaption>
+    </div>
+  </figure>
+
+  <!-- HISTÓRIAS REAIS -->
+  <section class="stories" id="cr-historias">
+    <div class="wrap">
+      <div class="stories-head">
+        <div class="hd"><span class="pill">Histórias reais</span><h2 class="serif">O Portal nas palavras de quem vive isso</h2></div>
+      </div>
+      <div class="story-grid">
+        <figure class="story"><img src="dep-davi.jpg" alt="Davi sentado com amigos, sorrindo, diante de um mural" width="480" height="480"><blockquote>Antes eu só conseguia falar as sílabas, mas aí vieram as tias do projeto e me ensinaram. Agora eu consigo ler!</blockquote><figcaption><b>Davi</b><span>9 anos</span></figcaption></figure>
+        <figure class="story"><img src="dep-alexander.jpg" alt="Alexander ajoelhado com duas crianças e uma bola de ginástica sobre o tatame" width="480" height="480"><blockquote>O Portal é a realização de um sonho. Graças ao espaço e à equipe do Portal, posso dar aula de capoeira para as crianças da minha comunidade.</blockquote><figcaption><b>Alexander</b><span>professor de capoeira</span></figcaption></figure>
+        <figure class="story"><img src="dep-bia.jpg" alt="Bia, sentada com luvas de boxe" width="480" height="480"><blockquote>Eu acho o Portal maravilhoso, porque aqui eu vivo experiências que nunca tinha vivido antes.</blockquote><figcaption><b>Bia</b><span>12 anos</span></figcaption></figure>
+        <figure class="story"><img src="dep-gabi.jpg" alt="Gabi, sentada, durante o batismo" width="480" height="480"><blockquote>O Portal fez toda a diferença na minha vida. Ele me trouxe de volta para Cristo! Eu fiz o Vila Teológica e me batizei. Foi emocionante e extraordinário.</blockquote><figcaption><b>Gabi</b></figcaption></figure>
+      </div>
+      <div class="actions on-light"><a class="btn btn-dark" href="#cr-contato">Faça parte</a><a class="btn btn-line" href="#cr-contribua">Contribua</a></div>
+    </div>
+  </section>
+
+  <!-- ONDE ESTAMOS -->
+  <section class="mapa" id="cr-mapa">
+    <div class="wrap">
+      <div class="mapa-grid">
+        <div class="mapa-txt">
+          <div class="hd"><span class="pill">Onde estamos</span><h2 class="serif">Onde estamos?</h2></div>
+          <p>De Belo Horizonte e Contagem ao Norte de Minas, estes são os lugares onde o Portal e a Igreja A Ponte BH caminham com as comunidades.</p>
+          <ol class="places">
+            <li><i>1</i><div><b>São Romão</b><span>Norte de Minas</span></div></li>
+            <li><i>2</i><div><b>Vila Paquetá</b><span>Região da Pampulha, Belo Horizonte</span></div></li>
+            <li><i>3</i><div><b>Lar Dorcas</b><span>Pedreira Prado Lopes, região da Lagoinha, Belo Horizonte</span></div></li>
+            <li><i>4</i><div><b>Ventosa</b><span>Região Oeste, Belo Horizonte</span></div></li>
+            <li><i>5</i><div><b>Ressaca</b><span>Contagem, Região Metropolitana de Belo Horizonte</span></div></li>
+            <li class="church"><i>6</i><div><b>Campus Castelo</b><span>Igreja A Ponte BH</span></div></li>
+            <li class="church"><i>7</i><div><b>Campus Zona Sul</b><span>Igreja A Ponte BH</span></div></li>
+          </ol>
+          <figure class="verse"><blockquote class="serif">“Buscar a paz e a prosperidade da cidade.”</blockquote><figcaption>Jeremias 29:7</figcaption></figure>
+          <div class="actions"><a class="btn btn-lime" href="#cr-contato">Faça parte</a><a class="btn btn-line" href="#cr-contribua">Contribua</a></div>
+        </div>
+        <div class="mapa-fig">
+          <svg class="mapa-defs" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><g id="cr-bh">
+            <circle r="250" fill="#143a35" stroke="#a3c62f" stroke-width="5"/>
+            <circle r="226" fill="none" stroke="#a3c62f" stroke-opacity=".25" stroke-width="2" stroke-dasharray="6 8"/>
+            <text x="0" y="-182" text-anchor="middle" fill="#ece4d0" font-size="23" font-weight="700" font-family="Georgia,Times New Roman,serif">Belo Horizonte e região</text>
+            <circle cx="-85" cy="-120" r="33" fill="none" stroke="#ece4d0" stroke-width="3" opacity=".4"/><circle cx="-85" cy="-120" r="23" fill="#ece4d0"/><text x="-85" y="-112" text-anchor="middle" fill="#10302c" font-size="21" font-weight="800" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">6</text><circle cx="95" cy="-120" r="33" fill="none" stroke="#a3c62f" stroke-width="3" opacity=".4"/><circle cx="95" cy="-120" r="23" fill="#a3c62f"/><text x="95" y="-112" text-anchor="middle" fill="#10302c" font-size="21" font-weight="800" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">2</text><circle cx="30" cy="-5" r="33" fill="none" stroke="#a3c62f" stroke-width="3" opacity=".4"/><circle cx="30" cy="-5" r="23" fill="#a3c62f"/><text x="30" y="3" text-anchor="middle" fill="#10302c" font-size="21" font-weight="800" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">3</text><circle cx="-120" cy="15" r="33" fill="none" stroke="#a3c62f" stroke-width="3" opacity=".4"/><circle cx="-120" cy="15" r="23" fill="#a3c62f"/><text x="-120" y="23" text-anchor="middle" fill="#10302c" font-size="21" font-weight="800" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">4</text><circle cx="-45" cy="120" r="33" fill="none" stroke="#a3c62f" stroke-width="3" opacity=".4"/><circle cx="-45" cy="120" r="23" fill="#a3c62f"/><text x="-45" y="128" text-anchor="middle" fill="#10302c" font-size="21" font-weight="800" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">5</text><circle cx="75" cy="105" r="33" fill="none" stroke="#ece4d0" stroke-width="3" opacity=".4"/><circle cx="75" cy="105" r="23" fill="#ece4d0"/><text x="75" y="113" text-anchor="middle" fill="#10302c" font-size="21" font-weight="800" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">7</text>
+            <text x="-85" y="-61" text-anchor="middle" fill="#ece4d0" stroke="#143a35" stroke-width="6" stroke-linejoin="round" paint-order="stroke" font-size="27" font-weight="700" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">Castelo</text><text x="95" y="-61" text-anchor="middle" fill="#ece4d0" stroke="#143a35" stroke-width="6" stroke-linejoin="round" paint-order="stroke" font-size="27" font-weight="700" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">Vila Paquetá</text><text x="30" y="54" text-anchor="middle" fill="#ece4d0" stroke="#143a35" stroke-width="6" stroke-linejoin="round" paint-order="stroke" font-size="27" font-weight="700" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">Lar Dorcas</text><text x="-120" y="74" text-anchor="middle" fill="#ece4d0" stroke="#143a35" stroke-width="6" stroke-linejoin="round" paint-order="stroke" font-size="27" font-weight="700" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">Ventosa</text><text x="-45" y="179" text-anchor="middle" fill="#ece4d0" stroke="#143a35" stroke-width="6" stroke-linejoin="round" paint-order="stroke" font-size="27" font-weight="700" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">Ressaca</text><text x="75" y="164" text-anchor="middle" fill="#ece4d0" stroke="#143a35" stroke-width="6" stroke-linejoin="round" paint-order="stroke" font-size="27" font-weight="700" font-family="Segoe UI,system-ui,-apple-system,Roboto,Helvetica,Arial,sans-serif">Zona Sul</text>
+          </g></defs></svg>
+          <svg class="mapa-svg z-d" viewBox="-12 -12 994 1062" role="img" aria-label="Mapa de Minas Gerais com os locais de atuação: São Romão, no Norte de Minas, e a região de Belo Horizonte ampliada, com Vila Paquetá, Castelo, Lar Dorcas, Ventosa, Ressaca e Zona Sul">
+            <path class="uf" d="M595.0,12.0C588.6,12.8 582.7,17.7 576.8,21.2C570.9,24.7 565.6,29.7 559.7,33.0C553.7,36.3 547.4,39.8 541.0,41.0C534.5,42.2 526.5,42.8 521.0,40.0C515.5,37.2 513.3,28.0 508.0,24.0C502.7,20.0 495.3,16.3 489.3,16.0C483.3,15.7 477.0,18.2 472.0,22.0C467.0,25.8 461.9,32.5 459.2,38.8C456.6,45.0 458.7,53.4 456.0,59.4C453.3,65.5 447.0,69.4 443.1,74.9C439.1,80.5 437.1,87.9 432.4,92.6C427.8,97.2 421.4,102.3 415.3,103.0C409.2,103.7 402.5,98.2 395.9,96.9C389.2,95.5 382.0,95.8 375.4,95.0C368.8,94.2 361.2,89.4 356.2,91.8C351.3,94.2 349.5,103.8 345.6,109.4C341.7,115.0 335.3,119.3 333.0,125.6C330.7,131.9 333.8,140.6 332.0,147.2C330.2,153.8 324.8,159.0 321.9,165.1C319.0,171.1 314.1,177.5 314.6,183.6C315.1,189.6 322.1,195.1 325.0,201.3C327.9,207.4 332.4,214.2 332.0,220.4C331.6,226.6 326.0,232.6 322.5,238.5C319.1,244.4 313.0,249.7 311.2,255.8C309.4,261.9 309.9,268.9 311.9,274.9C313.8,280.9 322.6,285.9 323.0,291.7C323.4,297.6 315.7,303.4 314.0,310.0C312.3,316.7 314.9,325.0 313.0,331.6C311.1,338.2 307.0,343.9 302.7,349.3C298.3,354.8 292.8,361.3 286.8,364.2C280.8,367.1 273.4,367.5 266.8,366.8C260.3,366.1 254.3,361.7 247.6,360.0C241.0,358.3 233.9,357.4 226.9,356.9C219.9,356.4 212.7,356.5 205.7,357.0C198.7,357.5 191.6,358.4 184.9,360.1C178.3,361.7 172.2,364.8 165.8,367.0C159.3,369.2 152.9,371.3 146.2,373.0C139.6,374.7 132.6,375.5 125.9,377.0C119.2,378.5 112.5,380.1 106.0,382.0C99.4,383.9 91.9,384.8 86.6,388.4C81.3,392.1 77.9,398.5 74.0,404.1C70.1,409.6 67.1,415.9 63.3,421.7C59.6,427.4 54.2,432.6 51.3,438.7C48.4,444.8 48.6,452.3 46.0,458.5C43.4,464.8 39.6,470.5 35.7,476.3C31.9,482.0 24.2,487.1 23.0,493.0C21.7,499.0 24.0,508.8 28.1,512.0C32.3,515.2 41.4,513.5 47.8,512.2C54.2,511.0 60.3,507.0 66.6,504.4C72.9,501.9 78.8,498.2 85.5,497.0C92.2,495.8 99.6,496.7 106.7,497.0C113.8,497.3 121.0,497.9 127.9,499.0C134.8,500.1 141.6,501.4 147.9,503.9C154.2,506.4 160.7,509.6 165.8,513.8C170.9,518.0 173.1,526.1 178.6,529.0C184.1,531.9 192.5,532.2 199.0,531.0C205.4,529.9 210.7,523.8 217.2,522.0C223.8,520.2 231.4,520.7 238.4,520.0C245.5,519.3 252.6,518.8 259.6,518.0C266.6,517.2 273.5,514.9 280.4,515.0C287.3,515.1 294.2,517.1 300.8,518.8C307.5,520.5 313.7,523.2 320.2,525.2C326.7,527.2 334.9,527.1 339.9,530.9C344.8,534.7 347.8,541.8 350.0,548.1C352.2,554.5 351.3,562.2 353.0,568.9C354.7,575.5 358.7,581.3 360.0,588.0C361.3,594.8 359.9,602.5 360.6,609.4C361.2,616.4 361.0,624.0 363.7,629.7C366.4,635.4 371.7,640.2 376.9,643.9C382.1,647.6 392.1,647.2 395.0,652.0C397.8,656.8 394.3,665.7 394.0,672.8C393.7,679.8 391.6,687.7 393.0,694.4C394.4,701.0 398.5,706.8 402.5,712.5C406.4,718.2 414.0,722.5 416.6,728.6C419.2,734.7 416.8,743.0 418.0,749.2C419.2,755.5 419.2,763.2 423.8,766.0C428.5,768.8 439.8,767.6 445.9,766.0C452.0,764.4 455.5,760.5 460.5,756.5C465.4,752.5 470.2,745.8 475.9,742.0C481.5,738.2 488.2,736.5 494.6,734.0C500.9,731.5 507.3,729.3 513.8,727.2C520.3,725.2 526.9,723.6 533.4,721.6C539.9,719.5 546.2,716.9 552.7,715.0C559.3,713.1 566.2,712.0 572.7,710.0C579.2,708.0 585.4,705.1 591.9,703.1C598.4,701.1 604.9,699.2 611.8,698.0C618.6,696.8 626.0,696.2 633.0,696.0C639.9,695.8 647.0,697.8 653.7,697.0C660.4,696.2 666.9,693.3 673.3,691.0C679.6,688.7 686.5,686.7 692.0,683.0C697.4,679.3 701.6,673.7 706.0,668.6C710.4,663.4 713.6,656.8 718.5,652.0C723.4,647.2 731.1,644.8 735.4,639.6C739.6,634.5 741.4,627.4 744.0,621.2C746.6,614.9 748.0,608.2 751.0,602.0C753.9,595.9 756.9,589.2 761.6,584.4C766.2,579.6 774.5,578.0 778.9,573.1C783.3,568.2 784.9,560.9 788.1,554.9C791.3,548.9 794.7,542.9 798.0,537.0C801.3,531.0 803.5,524.2 807.9,519.1C812.4,514.0 820.5,511.5 824.7,506.3C828.9,501.1 830.0,493.9 833.0,487.7C836.0,481.6 841.7,475.9 842.4,469.6C843.0,463.4 838.6,456.9 837.0,450.3C835.4,443.7 832.4,436.5 833.0,430.0C833.6,423.5 837.2,416.9 840.8,411.2C844.4,405.4 853.7,401.1 854.5,395.5C855.4,389.8 846.9,383.7 846.0,377.3C845.1,371.0 846.7,363.5 849.0,357.4C851.3,351.3 854.8,344.7 859.9,341.0C865.0,337.3 872.6,336.3 879.4,335.0C886.2,333.7 895.2,335.7 900.6,333.0C906.0,330.3 911.8,324.2 912.0,318.8C912.2,313.5 905.5,306.9 902.0,301.0C898.5,295.1 892.7,289.9 891.0,283.5C889.3,277.1 889.7,269.0 892.0,262.7C894.3,256.5 901.8,252.1 905.0,246.1C908.2,240.1 907.6,232.3 911.3,226.7C915.1,221.1 922.6,217.7 927.5,212.5C932.3,207.4 936.9,201.8 940.2,195.8C943.5,189.8 948.1,182.4 947.0,176.6C945.9,170.8 939.0,164.8 933.5,161.0C928.1,157.2 920.9,156.1 914.4,154.0C907.9,151.9 901.3,150.3 894.6,148.6C888.0,147.0 881.3,145.0 874.5,144.0C867.7,143.0 859.3,145.9 853.8,142.8C848.4,139.8 846.6,130.6 841.8,125.8C837.0,121.0 831.4,116.5 825.2,114.0C819.0,111.5 811.0,113.0 804.6,110.6C798.2,108.3 792.7,104.0 787.0,100.0C781.3,96.0 776.5,89.9 770.6,86.6C764.6,83.2 757.8,82.0 751.2,80.0C744.7,78.0 737.9,76.8 731.5,74.5C725.1,72.2 719.0,69.3 713.0,66.0C707.0,62.7 701.5,58.4 695.5,55.0C689.6,51.6 683.8,46.8 677.5,45.5C671.1,44.1 664.1,46.4 657.3,47.0C650.6,47.6 642.5,51.2 636.9,49.0C631.4,46.8 627.7,39.5 624.0,34.0C620.4,28.6 620.1,19.9 615.3,16.3C610.4,12.6 601.4,11.2 595.0,12.0Z"/>
+            <polygon class="cone" points="610,405 164.2,546.8 480.2,854.4"/>
+            <circle class="bh-halo" cx="610" cy="405" r="62"/><circle class="bh-halo2" cx="610" cy="405" r="38"/><circle class="bh-dot" cx="610" cy="405" r="14"/>
+            <g class="pin"><circle class="ring" cx="606" cy="85" r="33"/><circle cx="606" cy="85" r="23"/><text x="606" y="93" text-anchor="middle">1</text></g>
+            <g class="lab"><text x="570" y="92" text-anchor="end">São Romão</text></g>
+            <use href="#cr-bh" x="240" y="785"/>
+          </svg>
+          <svg class="mapa-svg z-m" viewBox="-12 -12 994 791" role="img" aria-label="Mapa de Minas Gerais com São Romão, no Norte de Minas, e a região de Belo Horizonte">
+            <path class="uf" d="M595.0,12.0C588.6,12.8 582.7,17.7 576.8,21.2C570.9,24.7 565.6,29.7 559.7,33.0C553.7,36.3 547.4,39.8 541.0,41.0C534.5,42.2 526.5,42.8 521.0,40.0C515.5,37.2 513.3,28.0 508.0,24.0C502.7,20.0 495.3,16.3 489.3,16.0C483.3,15.7 477.0,18.2 472.0,22.0C467.0,25.8 461.9,32.5 459.2,38.8C456.6,45.0 458.7,53.4 456.0,59.4C453.3,65.5 447.0,69.4 443.1,74.9C439.1,80.5 437.1,87.9 432.4,92.6C427.8,97.2 421.4,102.3 415.3,103.0C409.2,103.7 402.5,98.2 395.9,96.9C389.2,95.5 382.0,95.8 375.4,95.0C368.8,94.2 361.2,89.4 356.2,91.8C351.3,94.2 349.5,103.8 345.6,109.4C341.7,115.0 335.3,119.3 333.0,125.6C330.7,131.9 333.8,140.6 332.0,147.2C330.2,153.8 324.8,159.0 321.9,165.1C319.0,171.1 314.1,177.5 314.6,183.6C315.1,189.6 322.1,195.1 325.0,201.3C327.9,207.4 332.4,214.2 332.0,220.4C331.6,226.6 326.0,232.6 322.5,238.5C319.1,244.4 313.0,249.7 311.2,255.8C309.4,261.9 309.9,268.9 311.9,274.9C313.8,280.9 322.6,285.9 323.0,291.7C323.4,297.6 315.7,303.4 314.0,310.0C312.3,316.7 314.9,325.0 313.0,331.6C311.1,338.2 307.0,343.9 302.7,349.3C298.3,354.8 292.8,361.3 286.8,364.2C280.8,367.1 273.4,367.5 266.8,366.8C260.3,366.1 254.3,361.7 247.6,360.0C241.0,358.3 233.9,357.4 226.9,356.9C219.9,356.4 212.7,356.5 205.7,357.0C198.7,357.5 191.6,358.4 184.9,360.1C178.3,361.7 172.2,364.8 165.8,367.0C159.3,369.2 152.9,371.3 146.2,373.0C139.6,374.7 132.6,375.5 125.9,377.0C119.2,378.5 112.5,380.1 106.0,382.0C99.4,383.9 91.9,384.8 86.6,388.4C81.3,392.1 77.9,398.5 74.0,404.1C70.1,409.6 67.1,415.9 63.3,421.7C59.6,427.4 54.2,432.6 51.3,438.7C48.4,444.8 48.6,452.3 46.0,458.5C43.4,464.8 39.6,470.5 35.7,476.3C31.9,482.0 24.2,487.1 23.0,493.0C21.7,499.0 24.0,508.8 28.1,512.0C32.3,515.2 41.4,513.5 47.8,512.2C54.2,511.0 60.3,507.0 66.6,504.4C72.9,501.9 78.8,498.2 85.5,497.0C92.2,495.8 99.6,496.7 106.7,497.0C113.8,497.3 121.0,497.9 127.9,499.0C134.8,500.1 141.6,501.4 147.9,503.9C154.2,506.4 160.7,509.6 165.8,513.8C170.9,518.0 173.1,526.1 178.6,529.0C184.1,531.9 192.5,532.2 199.0,531.0C205.4,529.9 210.7,523.8 217.2,522.0C223.8,520.2 231.4,520.7 238.4,520.0C245.5,519.3 252.6,518.8 259.6,518.0C266.6,517.2 273.5,514.9 280.4,515.0C287.3,515.1 294.2,517.1 300.8,518.8C307.5,520.5 313.7,523.2 320.2,525.2C326.7,527.2 334.9,527.1 339.9,530.9C344.8,534.7 347.8,541.8 350.0,548.1C352.2,554.5 351.3,562.2 353.0,568.9C354.7,575.5 358.7,581.3 360.0,588.0C361.3,594.8 359.9,602.5 360.6,609.4C361.2,616.4 361.0,624.0 363.7,629.7C366.4,635.4 371.7,640.2 376.9,643.9C382.1,647.6 392.1,647.2 395.0,652.0C397.8,656.8 394.3,665.7 394.0,672.8C393.7,679.8 391.6,687.7 393.0,694.4C394.4,701.0 398.5,706.8 402.5,712.5C406.4,718.2 414.0,722.5 416.6,728.6C419.2,734.7 416.8,743.0 418.0,749.2C419.2,755.5 419.2,763.2 423.8,766.0C428.5,768.8 439.8,767.6 445.9,766.0C452.0,764.4 455.5,760.5 460.5,756.5C465.4,752.5 470.2,745.8 475.9,742.0C481.5,738.2 488.2,736.5 494.6,734.0C500.9,731.5 507.3,729.3 513.8,727.2C520.3,725.2 526.9,723.6 533.4,721.6C539.9,719.5 546.2,716.9 552.7,715.0C559.3,713.1 566.2,712.0 572.7,710.0C579.2,708.0 585.4,705.1 591.9,703.1C598.4,701.1 604.9,699.2 611.8,698.0C618.6,696.8 626.0,696.2 633.0,696.0C639.9,695.8 647.0,697.8 653.7,697.0C660.4,696.2 666.9,693.3 673.3,691.0C679.6,688.7 686.5,686.7 692.0,683.0C697.4,679.3 701.6,673.7 706.0,668.6C710.4,663.4 713.6,656.8 718.5,652.0C723.4,647.2 731.1,644.8 735.4,639.6C739.6,634.5 741.4,627.4 744.0,621.2C746.6,614.9 748.0,608.2 751.0,602.0C753.9,595.9 756.9,589.2 761.6,584.4C766.2,579.6 774.5,578.0 778.9,573.1C783.3,568.2 784.9,560.9 788.1,554.9C791.3,548.9 794.7,542.9 798.0,537.0C801.3,531.0 803.5,524.2 807.9,519.1C812.4,514.0 820.5,511.5 824.7,506.3C828.9,501.1 830.0,493.9 833.0,487.7C836.0,481.6 841.7,475.9 842.4,469.6C843.0,463.4 838.6,456.9 837.0,450.3C835.4,443.7 832.4,436.5 833.0,430.0C833.6,423.5 837.2,416.9 840.8,411.2C844.4,405.4 853.7,401.1 854.5,395.5C855.4,389.8 846.9,383.7 846.0,377.3C845.1,371.0 846.7,363.5 849.0,357.4C851.3,351.3 854.8,344.7 859.9,341.0C865.0,337.3 872.6,336.3 879.4,335.0C886.2,333.7 895.2,335.7 900.6,333.0C906.0,330.3 911.8,324.2 912.0,318.8C912.2,313.5 905.5,306.9 902.0,301.0C898.5,295.1 892.7,289.9 891.0,283.5C889.3,277.1 889.7,269.0 892.0,262.7C894.3,256.5 901.8,252.1 905.0,246.1C908.2,240.1 907.6,232.3 911.3,226.7C915.1,221.1 922.6,217.7 927.5,212.5C932.3,207.4 936.9,201.8 940.2,195.8C943.5,189.8 948.1,182.4 947.0,176.6C945.9,170.8 939.0,164.8 933.5,161.0C928.1,157.2 920.9,156.1 914.4,154.0C907.9,151.9 901.3,150.3 894.6,148.6C888.0,147.0 881.3,145.0 874.5,144.0C867.7,143.0 859.3,145.9 853.8,142.8C848.4,139.8 846.6,130.6 841.8,125.8C837.0,121.0 831.4,116.5 825.2,114.0C819.0,111.5 811.0,113.0 804.6,110.6C798.2,108.3 792.7,104.0 787.0,100.0C781.3,96.0 776.5,89.9 770.6,86.6C764.6,83.2 757.8,82.0 751.2,80.0C744.7,78.0 737.9,76.8 731.5,74.5C725.1,72.2 719.0,69.3 713.0,66.0C707.0,62.7 701.5,58.4 695.5,55.0C689.6,51.6 683.8,46.8 677.5,45.5C671.1,44.1 664.1,46.4 657.3,47.0C650.6,47.6 642.5,51.2 636.9,49.0C631.4,46.8 627.7,39.5 624.0,34.0C620.4,28.6 620.1,19.9 615.3,16.3C610.4,12.6 601.4,11.2 595.0,12.0Z"/>
+            <circle class="bh-halo" cx="610" cy="405" r="62"/><circle class="bh-halo2" cx="610" cy="405" r="38"/><circle class="bh-dot" cx="610" cy="405" r="14"/>
+            <g class="pin"><circle class="ring" cx="606" cy="85" r="33"/><circle cx="606" cy="85" r="23"/><text x="606" y="93" text-anchor="middle">1</text></g>
+            <g class="lab"><text x="570" y="92" text-anchor="end">São Romão</text><text x="540" y="400" text-anchor="end">Belo Horizonte</text><text x="540" y="440" text-anchor="end" class="sub">e região, ampliada abaixo</text></g>
+          </svg>
+          <svg class="bh-solo z-m" viewBox="-256 -256 512 512" role="img" aria-label="Ampliação da região de Belo Horizonte com Vila Paquetá, Castelo, Lar Dorcas, Ventosa, Ressaca e Zona Sul"><use href="#cr-bh"/></svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CITAÇÃO PIPER -->
+  <figure class="quote q-sky">
+    <div class="wrap"><span class="qm serif" aria-hidden="true">“</span>
+      <blockquote class="serif">A alegria em Deus nos liberta para nos tornarmos pessoas que vivem para os outros.</blockquote>
+      <figcaption><b>John Piper</b><span>True Joy Meets the Needs of Others</span></figcaption>
+    </div>
+  </figure>
 
   <!-- PARCEIROS -->
   <section class="partners" id="cr-parceiros">
@@ -394,8 +598,8 @@
         <div class="plist">
           <a href="https://www.instagram.com/ongterrasanta/" target="_blank" rel="noopener"><strong class="serif">ONG Terra Santa</strong><span>@ongterrasanta</span></a>
           <a href="https://www.instagram.com/cristohousebr/" target="_blank" rel="noopener"><strong class="serif">Cristo House</strong><span>@cristohousebr</span></a>
-          <a href="https://www.instagram.com/lovemovimento/" target="_blank" rel="noopener"><strong class="serif">Projeto Love</strong><span>@lovemovimento</span></a>
           <a href="https://www.instagram.com/institutoogrito/" target="_blank" rel="noopener"><strong class="serif">Instituto O Grito</strong><span>@institutoogrito</span></a>
+          <a href="https://www.instagram.com/transforma.brasil/" target="_blank" rel="noopener"><strong class="serif">Transforma Brasil</strong><span>@transforma.brasil</span></a>
         </div>
       </div>
       <div class="band band-end"><img src="div-3.jpg" alt="Crianças fazendo atividades numa mesa ao ar livre, à noite" style="object-position:50% 55%"></div>
